@@ -91,13 +91,13 @@ Wenn Sie NetApp noch nicht kennen und kein NSS-Konto haben, befolgen Sie die nac
 .Schritte
 . Wählen Sie oben rechts in der BlueXP Konsole das Hilfesymbol und dann *Support* aus.
 +
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-help-support.png["Ein Screenshot des Hilfemenüs, in dem „Support“ die erste aufgeführte Option ist"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-help-support.png["Ein Screenshot des Hilfemenüs, in dem „Support“ die erste aufgeführte Option ist."]
 
 . Suchen Sie auf der Support-Registrierungsseite nach der Seriennummer Ihrer Konto-ID.
 +
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-serial-number.png["Ein Screenshot des Hilfemenüs, in dem „Support“ die erste aufgeführte Option ist"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-serial-number.png["Ein Screenshot des Hilfemenüs, in dem „Support“ die erste aufgeführte Option ist."]
 
-. Navigieren Sie zu https://register.netapp.com["Support-Registrierungssite von NetApp"^] und wählen Sie *Ich bin kein registrierter NetApp Kunde*.
+. Navigieren Sie zu https://register.netapp.com["Support-Registrierungssite von NetApp"^] und wählen Sie *Ich bin kein registrierter NetApp -Kunde*.
 . Füllen Sie die Pflichtfelder (mit roten Sternchen gekennzeichnet) aus.
 . Wählen Sie im Feld *Produktlinie* *Cloud Manager* und dann Ihren entsprechenden Abrechnungsanbieter aus.
 . Kopieren Sie die Seriennummer Ihres Kontos aus Schritt 2 oben, schließen Sie die Sicherheitsüberprüfung ab und bestätigen Sie anschließend, dass Sie die globale Datenschutzrichtlinie von NetApp gelesen haben.
@@ -149,7 +149,7 @@ Diese NSS-Anmeldeinformationen sind mit Ihrer spezifischen BlueXP -Organisations
 .Schritte
 . Wählen Sie oben rechts in der BlueXP Konsole das Hilfesymbol und dann *Support* aus.
 +
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-help-support.png["Ein Screenshot des Hilfemenüs, in dem „Support“ die erste aufgeführte Option ist"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-help-support.png["Ein Screenshot des Hilfemenüs, in dem „Support“ die erste aufgeführte Option ist."]
 
 . Wählen Sie *NSS-Verwaltung > NSS-Konto hinzufügen*.
 . Wenn Sie dazu aufgefordert werden, wählen Sie *Weiter*, um zu einer Microsoft-Anmeldeseite weitergeleitet zu werden.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-replication-policies.html 
 keywords: replication policy, policy, replication, replicating, snapmirror, snapvault, data replication, disaster recovery, DR 
-summary: Möglicherweise benötigen Sie Hilfe bei der Auswahl einer Replikationsrichtlinie, wenn Sie die Datenreplikation in der NetApp Konsole einrichten.  Eine Replikationsrichtlinie definiert, wie das Speichersystem Daten von einem Quellvolume auf ein Zielvolume repliziert. 
+summary: Möglicherweise benötigen Sie Hilfe bei der Auswahl einer Replikationsrichtlinie, wenn Sie die Datenreplikation in der NetApp Console einrichten.  Eine Replikationsrichtlinie definiert, wie das Speichersystem Daten von einem Quellvolume auf ein Zielvolume repliziert. 
 ---
 = Erfahren Sie mehr über die in NetApp Replication verwendeten Replikationsrichtlinien
 :hardbreaks:

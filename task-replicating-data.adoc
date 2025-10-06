@@ -41,7 +41,7 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 Spezifische Anforderungen für Cloud Volumes ONTAP::
 +
 --
-* Die Sicherheitsgruppe der Instanz muss die erforderlichen eingehenden und ausgehenden Regeln enthalten: insbesondere Regeln für ICMP und die Ports 11104 und 11105.
+* Die Sicherheitsgruppe der Instanz muss die erforderlichen Regeln für eingehenden und ausgehenden Datenverkehr enthalten, insbesondere Regeln für ICMP und die Ports 11104 und 11105.
 +
 Diese Regeln sind in der vordefinierten Sicherheitsgruppe enthalten.
 
@@ -54,7 +54,7 @@ Spezifische Anforderungen für ONTAP -Cluster::
 +
 --
 * Eine aktive SnapMirror -Lizenz muss installiert sein.
-* Wenn sich der Cluster bei Ihnen vor Ort befindet, sollten Sie über eine Verbindung von Ihrem Unternehmensnetzwerk zu Ihrem virtuellen Netzwerk in der Cloud verfügen. Dies ist normalerweise eine VPN-Verbindung.
+* Wenn sich der Cluster bei Ihnen vor Ort befindet, sollten Sie über eine Verbindung von Ihrem Unternehmensnetzwerk zu Ihrem virtuellen Netzwerk in der Cloud verfügen.  Dies ist normalerweise eine VPN-Verbindung.
 * ONTAP -Cluster müssen zusätzliche Subnetz-, Port-, Firewall- und Clusteranforderungen erfüllen.
 +
 https://docs.netapp.com/us-en/ontap/peering/prerequisites-cluster-peering-reference.html#connectivity-requirements["Voraussetzungen für Cluster-Peering in der ONTAP Dokumentation anzeigen"^]
@@ -84,7 +84,7 @@ Sie können Daten replizieren, indem Sie eine einmalige Datenreplikation wählen
 +
 Die verbleibenden Schritte bieten ein Beispiel für die Erstellung einer Synchronisierungsbeziehung zwischen Cloud Volumes ONTAP oder lokalen ONTAP Clustern.
 
-. *Quell- und Ziel-Peering-Setup*: Wenn diese Seite angezeigt wird, wählen Sie alle Intercluster-LIFs für die Cluster-Peer-Beziehung aus.
+. *Einrichtung des Quell- und Ziel-Peerings*: Wenn diese Seite angezeigt wird, wählen Sie alle Intercluster-LIFs für die Cluster-Peer-Beziehung aus.
 +
 Das Intercluster-Netzwerk sollte so konfiguriert werden, dass Cluster-Peers über eine _paarweise Full-Mesh-Konnektivität_ verfügen, was bedeutet, dass jedes Cluster-Paar in einer Cluster-Peer-Beziehung über Konnektivität zwischen allen ihren Intercluster-LIFs verfügt.
 

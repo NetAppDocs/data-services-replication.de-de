@@ -36,7 +36,7 @@ In der folgenden Tabelle werden die verfügbaren Aktionen beschrieben:
 | Information | Zeigt Ihnen Details zur Volume-Beziehung: Übertragungsinformationen, Informationen zur letzten Übertragung, Details zum Volume und Informationen zur der Beziehung zugewiesenen Schutzrichtlinie. 
 
 
-| Brechen | Bricht die Beziehung zwischen Quell- und Zielvolume auf und aktiviert das Zielvolume für den Datenzugriff. Diese Option wird normalerweise verwendet, wenn das Quellvolume aufgrund von Ereignissen wie Datenbeschädigung, versehentlichem Löschen oder einem Offline-Status keine Daten bereitstellen kann.https://docs.netapp.com/us-en/ontap-sm-classic/volume-disaster-recovery/index.html["Erfahren Sie in der ONTAP -Dokumentation, wie Sie ein Zielvolume für den Datenzugriff konfigurieren und ein Quellvolume reaktivieren."^] 
+| Brechen | Bricht die Beziehung zwischen Quell- und Zielvolume auf und aktiviert das Zielvolume für den Datenzugriff.  Diese Option wird normalerweise verwendet, wenn das Quellvolume aufgrund von Ereignissen wie Datenbeschädigung, versehentlichem Löschen oder einem Offline-Status keine Daten bereitstellen kann.https://docs.netapp.com/us-en/ontap-sm-classic/volume-disaster-recovery/index.html["Erfahren Sie in der ONTAP -Dokumentation, wie Sie ein Zielvolume für den Datenzugriff konfigurieren und ein Quellvolume reaktivieren."^] 
 
 
 | Neu synchronisieren  a| 
@@ -49,7 +49,7 @@ Erfahren Sie, wie Sie eine umgekehrte Neusynchronisierung durchführen, bei der 
 
 
 
-| Umgekehrte Neusynchronisierung | Vertauscht die Rollen der Quell- und Zielvolumes. Inhalte des ursprünglichen Quellvolumes werden durch Inhalte des Zielvolumes überschrieben. Dies ist hilfreich, wenn Sie ein Quellvolume reaktivieren möchten, das offline gegangen ist. Alle Daten, die zwischen der letzten Datenreplikation und der Deaktivierung des Quellvolumes auf das ursprüngliche Quellvolume geschrieben wurden, bleiben nicht erhalten. 
+| Umgekehrte Neusynchronisierung | Vertauscht die Rollen der Quell- und Zielvolumes.  Inhalte des ursprünglichen Quellvolumes werden durch Inhalte des Zielvolumes überschrieben.  Dies ist hilfreich, wenn Sie ein Quellvolume reaktivieren möchten, das offline gegangen ist.  Alle Daten, die zwischen der letzten Datenreplikation und der Deaktivierung des Quellvolumes auf das ursprüngliche Quellvolume geschrieben wurden, bleiben nicht erhalten. 
 
 
 | Zeitplan bearbeiten | Ermöglicht Ihnen, einen anderen Zeitplan für die Datenreplikation auszuwählen. 
@@ -61,7 +61,7 @@ Erfahren Sie, wie Sie eine umgekehrte Neusynchronisierung durchführen, bei der 
 | Aktualisieren | Startet eine inkrementelle Übertragung, um das Zielvolume zu aktualisieren. 
 
 
-| Löschen | Löscht die Datenschutzbeziehung zwischen Quell- und Zielvolumes, was bedeutet, dass keine Datenreplikation mehr zwischen den Volumes stattfindet. Durch diese Aktion wird das Zielvolume nicht für den Datenzugriff aktiviert. 
+| Löschen | Löscht die Datenschutzbeziehung zwischen Quell- und Zielvolumes, was bedeutet, dass keine Datenreplikation mehr zwischen den Volumes stattfindet.  Durch diese Aktion wird das Zielvolume nicht für den Datenzugriff aktiviert. 
 |===
 
 
