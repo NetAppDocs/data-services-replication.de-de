@@ -1,0 +1,11 @@
+= Support für Amazon FSx für ONTAP
+:allow-uri-read: 
+
+
+
+
+=== Support für Amazon FSx für ONTAP
+
+Sie können jetzt Daten von einem Cloud Volumes ONTAP -System oder einem lokalen ONTAP Cluster auf ein Amazon FSx für ONTAP Dateisystem replizieren.
+
+https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Erfahren Sie, wie Sie die Datenreplikation einrichten"] .

@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: task-managing-replication.html 
+keywords: replication policy, policy, replication, replicating, snapmirror, snapvault, data replication, source, destination, schedule, relationship, break, resync, max transfer, maximum transfer rate, rate, transfer rate, reverse resync, status, replication status, disaster recovery, DR, archive, archiving, retention 
+summary: Nachdem Sie die Datenreplikation zwischen zwei Systemen eingerichtet haben, können Sie den Zeitplan und die Beziehung der Datenreplikation von NetApp Replication aus verwalten. 
+---
+= Verwalten der Datenreplikation in NetApp Replication
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie die Datenreplikation zwischen zwei Systemen eingerichtet haben, können Sie den Zeitplan und die Beziehung der Datenreplikation von NetApp Replication aus verwalten.
+
+.Schritte
+. link:task-login-replication.html["Melden Sie sich bei NetApp Replication an"] .
+. Überprüfen Sie den Status der Datenreplikationsbeziehungen, um sicherzustellen, dass sie fehlerfrei sind.
++
+
+NOTE: Wenn der Status einer Beziehung „Leerlauf“ und der Spiegelstatus „nicht initialisiert“ lautet, müssen Sie die Beziehung vom Zielsystem aus initialisieren, damit die Datenreplikation gemäß dem definierten Zeitplan erfolgt.  Sie können die Beziehung mithilfe des System Managers oder der Befehlszeilenschnittstelle (CLI) initialisieren.  Diese Zustände können auftreten, wenn das Zielsystem ausfällt und dann wieder online geht.
+
+. Wählen Sie das Aktionsmenü für eine Volumenbeziehung und wählen Sie eine der verfügbaren Aktionen aus.
++
+In der folgenden Tabelle werden die verfügbaren Aktionen beschrieben:
+
++
+[cols="15,85"]
+|===
+| Aktion | Beschreibung 
+
+
+| Information | Zeigt Ihnen Details zur Volume-Beziehung: Übertragungsinformationen, Informationen zur letzten Übertragung, Details zum Volume und Informationen zur der Beziehung zugewiesenen Schutzrichtlinie. 
+
+
+| Brechen | Bricht die Beziehung zwischen Quell- und Zielvolume auf und aktiviert das Zielvolume für den Datenzugriff. Diese Option wird normalerweise verwendet, wenn das Quellvolume aufgrund von Ereignissen wie Datenbeschädigung, versehentlichem Löschen oder einem Offline-Status keine Daten bereitstellen kann.https://docs.netapp.com/us-en/ontap-sm-classic/volume-disaster-recovery/index.html["Erfahren Sie in der ONTAP -Dokumentation, wie Sie ein Zielvolume für den Datenzugriff konfigurieren und ein Quellvolume reaktivieren."^] 
+
+
+| Neu synchronisieren  a| 
+Stellt eine unterbrochene Beziehung zwischen Volumes wieder her und nimmt die Datenreplikation gemäß dem definierten Zeitplan wieder auf.
+
+
+NOTE: Wenn Sie die Volumes neu synchronisieren, werden die Inhalte auf dem Zielvolume durch die Inhalte auf dem Quellvolume überschrieben.
+
+Erfahren Sie, wie Sie eine umgekehrte Neusynchronisierung durchführen, bei der die Daten vom Zielvolume mit dem Quellvolume neu synchronisiert werden. Gehen Sie dazu auf die https://docs.netapp.com/us-en/ontap-sm-classic/volume-disaster-recovery/index.html["ONTAP-Dokumentation"^] .
+
+
+
+| Umgekehrte Neusynchronisierung | Vertauscht die Rollen der Quell- und Zielvolumes. Inhalte des ursprünglichen Quellvolumes werden durch Inhalte des Zielvolumes überschrieben. Dies ist hilfreich, wenn Sie ein Quellvolume reaktivieren möchten, das offline gegangen ist. Alle Daten, die zwischen der letzten Datenreplikation und der Deaktivierung des Quellvolumes auf das ursprüngliche Quellvolume geschrieben wurden, bleiben nicht erhalten. 
+
+
+| Zeitplan bearbeiten | Ermöglicht Ihnen, einen anderen Zeitplan für die Datenreplikation auszuwählen. 
+
+
+| Max. Übertragungsrate bearbeiten | Ermöglicht Ihnen, die maximale Rate (in Kilobyte pro Sekunde) zu bearbeiten, mit der Daten übertragen werden können. 
+
+
+| Aktualisieren | Startet eine inkrementelle Übertragung, um das Zielvolume zu aktualisieren. 
+
+
+| Löschen | Löscht die Datenschutzbeziehung zwischen Quell- und Zielvolumes, was bedeutet, dass keine Datenreplikation mehr zwischen den Volumes stattfindet. Durch diese Aktion wird das Zielvolume nicht für den Datenzugriff aktiviert. 
+|===
+
+
+.Ergebnis
+Nachdem Sie eine Aktion ausgewählt haben, aktualisiert NetApp Replication die Beziehung oder den Zeitplan.

@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, releases' 
+summary: Erfahren Sie, was es Neues bei NetApp Replication gibt. 
+---
+= Was ist neu bei NetApp Replication?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erfahren Sie, was es Neues bei NetApp Replication gibt.
+
+
+
+== 06. Oktober 2025
+
+
+
+=== BlueXP replication heißt jetzt NetApp -Replikation
+
+Die BlueXP replication wurde in NetApp -Replikation umbenannt.
+
+
+
+=== BlueXP heißt jetzt NetApp Console
+
+Die NetApp Console basiert auf der verbesserten und neu strukturierten BlueXP -Grundlage und ermöglicht die zentrale Verwaltung von NetApp Storage und NetApp Data Services in On-Premises- und Cloud-Umgebungen auf Unternehmensniveau. Sie liefert Einblicke in Echtzeit, schnellere Workflows und eine vereinfachte Administration mit hoher Sicherheit und Konformität.
+
+Einzelheiten zu den Änderungen finden Sie imlink:https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Versionshinweise zur NetApp Konsole"] .
+
+
+
+== 18. September 2022
+
+
+
+=== FSx für ONTAP zu Cloud Volumes ONTAP
+
+Sie können jetzt Daten von einem Amazon FSx for ONTAP -Dateisystem auf Cloud Volumes ONTAP replizieren.
+
+https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Erfahren Sie, wie Sie die Datenreplikation einrichten"] .
+
+
+
+== 31. Juli 2022
+
+
+
+=== FSx for ONTAP als Datenquelle
+
+Sie können jetzt Daten von einem Amazon FSx for ONTAP -Dateisystem an die folgenden Ziele replizieren:
+
+* Amazon FSx für ONTAP
+* On-Premises- ONTAP -Cluster
+
+
+https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Erfahren Sie, wie Sie die Datenreplikation einrichten"] .
+
+
+
+== 02. September 2021
+
+
+
+=== Support für Amazon FSx für ONTAP
+
+Sie können jetzt Daten von einem Cloud Volumes ONTAP -System oder einem lokalen ONTAP Cluster auf ein Amazon FSx für ONTAP Dateisystem replizieren.
+
+https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Erfahren Sie, wie Sie die Datenreplikation einrichten"] .
+
+
+
+== 05. Mai 2021
+
+
+
+=== Neu gestaltete Benutzeroberfläche
+
+Wir haben die Replikation neu gestaltet, um sie benutzerfreundlicher zu gestalten und sie an das aktuelle Erscheinungsbild der Benutzeroberfläche anzupassen.
+
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-replication/main/media/replication.gif["Ein Screenshot der neu gestalteten Registerkarte „Replikation“, die eine Liste der Volume-Beziehungen anzeigt."]
