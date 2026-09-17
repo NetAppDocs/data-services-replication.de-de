@@ -27,7 +27,7 @@ Eine Sicherungsrichtlinie enthält Regeln, die angeben, welche gekennzeichneten 
 
 Beispielsweise führt eine Sicherungsrichtlinie, die die Bezeichnungen „täglich“ und „wöchentlich“ enthält, zur Replikation von Snapshot-Kopien, die nur diese Bezeichnungen enthalten.  Es werden keine anderen Snapshot-Kopien repliziert, wie im folgenden Bild gezeigt:
 
-image:diagram_replication_snapvault_policy.png["Diese Abbildung zeigt eine Snapshot-Richtlinie, ein Quellvolume, die aus der Snapshot-Richtlinie erstellten Snapshot-Kopien und anschließend die Replikation dieser Snapshot-Kopien auf ein Zielvolume basierend auf einer Sicherungsrichtlinie, die die Replikation von Snapshot-Kopien mit den Bezeichnungen „täglich“ und „wöchentlich“ angibt."]
+image:diagram_replication_snapvault_policy.png["Eine Abbildung zeigt eine Snapshot-Richtlinie, ein Quellvolume, die aus der Snapshot-Richtlinie erstellten Snapshot-Kopien und anschließend die Replikation dieser Snapshot-Kopien auf ein Zielvolume basierend auf einer Backup-Richtlinie, die die Replikation von Snapshot-Kopien mit den Bezeichnungen „daily“ und „weekly“ festlegt."]
 
 
 

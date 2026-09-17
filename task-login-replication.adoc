@@ -20,9 +20,6 @@ Für die Anmeldung an der Konsole können Sie Ihre NetApp Support Site-Zugangsda
 
 .Schritte
 . Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com/["NetApp Console"^] .
-+
-Die Anmeldeseite der NetApp Console wird angezeigt.
-
 . Melden Sie sich bei der Konsole an.
 . Wählen Sie in der linken Navigation der Konsole *Schutz* > *Replikation* aus.
 

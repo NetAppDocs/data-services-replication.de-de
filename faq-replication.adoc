@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: faq-replication.html 
+keywords: faq, frequently asked questions, snapmirror, snapvault, replication policies, backup policies, data protection, cloud volumes ontap, amazon fsx, ontap, mirror, backup, cascade, fanout 
+summary: Häufig gestellte Fragen zur NetApp Replication, einschließlich unterstützter Konfigurationen und Möglichkeiten zur Lösung häufiger Probleme. 
+---
+= Häufig gestellte Fragen zu NetApp Replication
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Diese FAQ beantwortet häufig gestellte Fragen zur NetApp Replication. Im Mittelpunkt stehen Konzepte, Terminologie und Verhaltensweisen, die beim Einrichten, Verwalten und Beheben von Problemen mit Replikationsbeziehungen zwischen ONTAP Systemen, Cloud Volumes ONTAP und Amazon FSx für ONTAP nützlich sind.
+
+
+
+[[general-concepts]]
+== Allgemeine Konzepte
+
+.Welche Quell- und Zielsystemkombinationen werden von der Replikation unterstützt?
+Die Replikation unterstützt Amazon FSx für ONTAP, Cloud Volumes ONTAP und On-Premises ONTAP. Eine Replikation kann zwischen allen drei Systemen konfiguriert werden.
+
+.Welche Datenschutzkonfigurationen unterstützt die Replikation?
+Die Replikation unterstützt drei Konfigurationen:
+
+* *Ganz einfach*: Die Replikation erfolgt von Volume A zu Volume B.
+* *Fanout*: Die Replikation erfolgt von Volume A zu mehreren Zielen.
+* *Kaskade*: Die Replikation erfolgt von Volume A zu Volume B und dann von Volume B zu Volume C.
+
+
+.Was geschieht während der ersten Replikationsübertragung im Vergleich zu den nachfolgenden Übertragungen?
+Der Basistransfer umfasst eine vollständige Kopie der Quelldaten. Nachfolgende Transfers enthalten nur differentielle (inkrementelle) Kopien der Quelldaten.
+
+.Entstehen durch die Replikation Kosten?
+NetApp erhebt keine Gebühren für die Nutzung von Replication selbst, jedoch sollten Sie sich bei Ihrem Cloud-Anbieter über mögliche Gebühren für den Dateningress und -egress informieren. Für die NetApp Console fallen Gebühren an, wenn Console-Agenten bereitgestellt werden, um eine Verbindung zu Ihren Speichersystemen oder Datendiensten herzustellen; einige andere von der Console aus zugängliche NetApp Datendienste sind lizenz- oder abonnementbasiert.
+
+.Wird eine Lizenz oder ein Abonnement benötigt, um Replication zu verwenden?
+Für die Nutzung der Console oder Replication ist keine Lizenz oder kein Abonnement erforderlich. Für lokale ONTAP Konfigurationen muss eine aktive SnapMirror Lizenz installiert sein.
+
+
+
+[[replication-policies]]
+== Replikationsrichtlinien
+
+.Worin besteht der Unterschied zwischen einer Spiegelrichtlinie und einer Sicherungsrichtlinie?
+Es gibt drei Arten von Replikationsrichtlinien:
+
+* *Mirror*: Repliziert neu erstellte Snapshot-Kopien auf ein Zielvolume, nützlich zur Vorbereitung der Notfallwiederherstellung oder für die einmalige Datenreplizierung; das Zielvolume kann jederzeit für den Datenzugriff aktiviert werden.
+* *Backup*: Repliziert spezifische, gekennzeichnete Snapshot-Kopien auf ein Ziel-Volume und bewahrt diese in der Regel länger auf als auf dem Quell-Volume, was für die Wiederherstellung beschädigter oder verlorener Daten sowie für Compliance- und Governance-Zwecke nützlich ist.
+* *Mirror and Backup*: kombiniert Disaster Recovery und Langzeitarchivierung und ist die Standardrichtlinie, die in jedem System enthalten ist.
+
+
+Falls die Standardrichtlinien Ihren Anforderungen nicht entsprechen, können Sie mit System Manager benutzerdefinierte Richtlinien erstellen.
+
+.Warum repliziert meine Backup-Richtlinie keine Snapshot-Kopien?
+Eine Sicherungsrichtlinie repliziert nur Snapshot-Kopien, deren Bezeichnungen mit den in der Snapshot-Richtlinie des Quellvolumes definierten Bezeichnungen übereinstimmen. Stimmen die Bezeichnungen Ihrer benutzerdefinierten Sicherungsrichtlinie mit keiner Bezeichnung in der Snapshot-Richtlinie überein, kann das System keine Snapshot-Kopien replizieren. Beispielsweise repliziert eine Sicherungsrichtlinie mit den Bezeichnungen „täglich“ und „wöchentlich“ nur Snapshot-Kopien mit diesen Bezeichnungen.
+
+.Welche Standardeinstellungen für die Aufbewahrung von Snapshots gelten, wenn die Standardrichtlinien verwendet werden?
+Die Standard-Snapshot-Richtlinie erstellt stündliche, tägliche und wöchentliche Snapshot-Kopien und speichert sechs stündliche, zwei tägliche und zwei wöchentliche Kopien. Die Standard-Backup-Richtlinien replizieren tägliche und wöchentliche Snapshot-Kopien; sie speichern 7 tägliche und 52 wöchentliche Snapshot-Kopien.
+
+
+
+[[setting-up-replication]]
+== Einrichten der Replikation
+
+.Was muss ich vor der Einrichtung der Datenreplizierung überprüfen?
+Vor der Datenreplikation ist Folgendes zu bestätigen:
+
+* Die Quell- und Zielsysteme existieren bereits (oder erstellen Sie diese).
+* Es sollte geprüft werden, ob auf den Quell- und Zielvolumes kompatible ONTAP Versionen ausgeführt werden; siehe link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["kompatible ONTAP Versionen"^].
+* Es sollte sichergestellt sein, dass die systemspezifischen Anforderungen für link:task-replicating-data.html["Anforderungen an die Datenreplizierung"] erfüllt sind.
+
+
+.Was ist erforderlich, damit die Cluster Peer-Beziehung über Intercluster-LIFs korrekt funktioniert?
+Das Intercluster-Netzwerk sollte so konfiguriert sein, dass Cluster-Peers paarweise vollständig vernetzt sind, das heißt, jedes Clusterpaar in einer Cluster Peer-Beziehung verfügt über eine Verbindung zwischen allen ihren Intercluster-LIFs. Dies gilt, wenn ein ONTAP Cluster mit mehreren LIFs als Quelle oder Ziel dient.
+
+.Kann ein benutzerdefinierter Replikationszeitplan erstellt werden?
+Bei der Einrichtung der Replikation stehen mehrere Standardzeitpläne zur Verfügung. Falls ein anderer Zeitplan benötigt wird, ist auf dem Ziel-Cluster mit dem System Manager ein neuer Zeitplan zu erstellen.
+
+
+
+[[managing-replication-relationships]]
+== Verwaltung von Replikationsbeziehungen
+
+.Was bedeutet es, wenn eine Replikationsbeziehung den Status „Leerlauf“ und den Spiegelstatus „Nicht initialisiert“ anzeigt?
+Dies kann vorkommen, wenn das Zielsystem ausfällt und anschließend wieder online geht. Die Beziehung muss vom Zielsystem aus mithilfe von System Manager oder der CLI initialisiert werden, damit die Datenreplizierung gemäß dem definierten Zeitplan fortgesetzt wird.
+
+.Worin besteht der Unterschied zwischen den Aktionen „Unterbrechen“, „Neusynchronisieren“ und „Reverse Resync“?
+Diese Maßnahmen haben unterschiedliche Auswirkungen:
+
+* *Unterbrechen*: Unterbricht die Beziehung zwischen Quell- und Zielvolume und aktiviert das Zielvolume für den Datenzugriff. Wird typischerweise verwendet, wenn das Quellvolume aufgrund von Beschädigung, Löschung oder eines Offline-Status keine Daten bereitstellen kann.
+* *Resync*: Stellt eine unterbrochene Beziehung wieder her und setzt die Replikation planmäßig fort; der Inhalt des Ziel-Volumes wird durch den Inhalt des Quell-Volumes überschrieben.
+* *Umgekehrte Resynchronisierung*: Vertauscht die Rollen von Quell- und Zielvolume und überschreibt den Inhalt des ursprünglichen Quellvolumes mit dem Inhalt des Zielvolumes. Alle Daten, die zwischen der letzten Replikation und dem Zeitpunkt, an dem das ursprüngliche Quellvolume offline ging, auf das ursprüngliche Quellvolume geschrieben wurden, bleiben nicht erhalten.
+
+
+.Was passiert, wenn ich eine Replikationsbeziehung lösche?
+Durch das Löschen der Datenreplizierungsbeziehung zwischen Quell- und Ziel-Volume wird die Datenreplizierung zwischen den Volumes beendet, die SnapMirror Beziehung am Ziel-Cluster gelöscht und die Beziehung am Quell-Cluster freigegeben. Es wird außerdem die SnapMirror Beziehung unterbrochen, wodurch das Ziel-Volume kurzzeitig als primärer Standort für lesen/schreiben fungiert, sodass das Ziel nach dem Entfernen der Replikation unabhängig genutzt werden kann.
+
+.Warum sollte die maximale Transferrate begrenzt und nicht unbegrenzt gelassen werden?
+Eine unbegrenzte Transferrate kann die Leistung anderer Anwendungen und Ihre Internetleistung beeinträchtigen. Die maximale Transferrate (in Megabyte pro Sekunde) sollte bei der Einrichtung der Replikation begrenzt werden; eine spätere Bearbeitung ist auf der Seite Replication Status möglich.
