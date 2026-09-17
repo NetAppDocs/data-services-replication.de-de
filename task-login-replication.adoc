@@ -16,7 +16,7 @@ summary: Verwenden Sie die NetApp Console , um sich bei NetApp Replication anzum
 [role="lead"]
 Verwenden Sie die NetApp Console , um sich bei NetApp Replication anzumelden.
 
-Um sich bei der Konsole anzumelden, können Sie Ihre Anmeldeinformationen für die NetApp Support-Site verwenden oder sich mit Ihrer E-Mail-Adresse und einem Kennwort für eine NetApp Cloud-Anmeldung anmelden. https://docs.netapp.com/us-en/bluexp-setup-admin/task-logging-in.html["Erfahren Sie mehr über die Anmeldung"^] .
+Für die Anmeldung an der Konsole können Sie Ihre NetApp Support Site-Zugangsdaten verwenden oder sich mit Ihrer E-Mail-Adresse und einem Passwort für eine NetApp Cloud-Anmeldung registrieren. https://docs.netapp.com/us-en/console-setup-admin/task-logging-in.html["Erfahren Sie mehr über die Anmeldung"^].
 
 .Schritte
 . Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com/["NetApp Console"^] .

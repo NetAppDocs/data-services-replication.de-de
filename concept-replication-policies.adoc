@@ -18,6 +18,7 @@ Möglicherweise benötigen Sie Hilfe bei der Auswahl einer Replikationsrichtlini
 
 
 
+[[what-replication-policies-do]]
 == Was Replikationsrichtlinien bewirken
 
 Das ONTAP -Betriebssystem erstellt automatisch Backups, sogenannte Snapshot-Kopien.  Eine Snapshot-Kopie ist ein schreibgeschütztes Abbild eines Datenträgers, das den Zustand des Dateisystems zu einem bestimmten Zeitpunkt erfasst.
@@ -33,6 +34,7 @@ image:diagram_replication_policies.png["Diese Abbildung zeigt Snapshot-Kopien au
 
 
 
+[[types-of-replication-policies]]
 == Arten von Replikationsrichtlinien
 
 Es gibt drei Arten von Replikationsrichtlinien:

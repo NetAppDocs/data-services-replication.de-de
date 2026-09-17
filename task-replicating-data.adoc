@@ -18,6 +18,7 @@ Replizieren Sie mit NetApp Replication Daten zwischen ONTAP -Systemen, indem Sie
 
 
 
+[[step-1-review-data-replication-requirements]]
 == Schritt 1: Überprüfen der Anforderungen für die Datenreplikation
 
 Bevor Sie Daten replizieren können, sollten Sie bestätigen, dass bestimmte Anforderungen für Cloud Volumes ONTAP, lokale ONTAP Cluster oder Amazon FSx für ONTAP erfüllt sind.
@@ -25,10 +26,10 @@ Bevor Sie Daten replizieren können, sollten Sie bestätigen, dass bestimmte Anf
 Systeme:: Falls noch nicht geschehen, müssen Sie die Systeme für die Quelle und das Ziel in der Datenreplikationsbeziehung erstellen.
 +
 --
-* https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/task-getting-started-fsx.html["Erstellen Sie ein Amazon FSx für ONTAP -System"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-overview-cvo.html["Erstellen Sie ein Cloud Volumes ONTAP -System"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-adding-systems.html["Hinzufügen vorhandener Cloud Volumes ONTAP -Systeme"^]
-* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["Entdecken Sie ONTAP Cluster"^]
+* https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/task-getting-started-fsx.html["Erstellen Sie ein Amazon FSx für ONTAP -System"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-overview-cvo.html["Erstellen Sie ein Cloud Volumes ONTAP -System"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-adding-systems.html["Hinzufügen vorhandener Cloud Volumes ONTAP -Systeme"^]
+* https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["Entdecken Sie ONTAP Cluster"^]
 
 
 --
@@ -74,6 +75,7 @@ Spezifische Anforderungen für Amazon FSx für ONTAP::
 
 
 
+[[step-2-replicate-data-between-systems]]
 == Schritt 2: Daten zwischen Systemen replizieren
 
 Sie können Daten replizieren, indem Sie eine einmalige Datenreplikation wählen, die Ihnen beim Verschieben von Daten in die und aus der Cloud helfen kann, oder einen wiederkehrenden Zeitplan, der bei der Notfallwiederherstellung oder der langfristigen Aufbewahrung hilfreich sein kann.

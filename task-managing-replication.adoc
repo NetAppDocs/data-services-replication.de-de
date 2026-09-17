@@ -16,8 +16,16 @@ summary: Nachdem Sie die Datenreplikation zwischen zwei Systemen eingerichtet ha
 [role="lead"]
 Nachdem Sie die Datenreplikation zwischen zwei Systemen eingerichtet haben, können Sie den Zeitplan und die Beziehung der Datenreplikation von NetApp Replication aus verwalten.
 
+Replikationsbeziehungen mit FSx for ONTAP Dateisystemen als Quelle oder Ziel werden in NetApp Workload Factory verwaltet. Diese Beziehungen lassen sich auf der Seite „Console Systeme“ verwalten, indem das FSx for ONTAP Dateisystem ausgewählt wird.
+
 .Schritte
 . link:task-login-replication.html["Melden Sie sich bei NetApp Replication an"] .
++
+Fahren Sie mit Schritt 2 fort, um Nicht-FSx for ONTAP Replikationsbeziehungen zu verwalten.
+
++
+Zur Verwaltung von Replikationsbeziehungen mit FSx for ONTAP Dateisystemen nach der Anmeldung an der NetApp Console zu *Speicher* > *Management* > *Systeme* wechseln. Anschließend das FSx for ONTAP Dateisystem auswählen. Nun befindet man sich in Workload Factory im FSx for ONTAP Ressourcenbildschirm. Die Registerkarte *Replikationsbeziehungen* bietet eine Übersicht und Verwaltung der Replikationsbeziehungen für das Dateisystem.
+
 . Überprüfen Sie den Status der Datenreplikationsbeziehungen, um sicherzustellen, dass sie fehlerfrei sind.
 +
 

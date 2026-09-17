@@ -4,6 +4,7 @@
 
 
 
+[[fsx-for-ontap-as-the-data-source]]
 === FSx for ONTAP als Datenquelle
 
 Sie können jetzt Daten von einem Amazon FSx for ONTAP -Dateisystem an die folgenden Ziele replizieren:
@@ -12,4 +13,4 @@ Sie können jetzt Daten von einem Amazon FSx for ONTAP -Dateisystem an die folge
 * On-Premises- ONTAP -Cluster
 
 
-https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Erfahren Sie, wie Sie die Datenreplikation einrichten"] .
+link:https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html["Erfahren Sie, wie Sie die Datenreplikation einrichten"].
